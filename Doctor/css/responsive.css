@@ -1,0 +1,682 @@
+/* ==========================================================================
+   Mobile-First Responsive System & Breakpoint Enhancements
+   Breakpoints: 768px (Tablet), 1024px (Desktop), 1440px (Large Screen)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. BASE MOBILE STYLES (< 768px) - Touch-Friendly & Single-Column Optimized
+   -------------------------------------------------------------------------- */
+:root {
+  --container-padding: 18px;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.container {
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section-header {
+  margin-bottom: 36px;
+  text-align: center;
+  padding: 0 8px;
+}
+
+.section-title {
+  font-size: 1.85rem;
+  line-height: 1.25;
+}
+
+.section-desc {
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+/* Mobile Topbar & Nav */
+.topbar {
+  display: none;
+}
+
+.nav-menu {
+  display: none;
+}
+
+.nav-phone {
+  display: none;
+}
+
+.hamburger {
+  display: flex;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-book-btn {
+  display: none;
+}
+
+/* Mobile Hero */
+.hero-section {
+  padding: 40px 0 60px 0;
+  min-height: auto;
+}
+
+.hero-grid {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 36px;
+  text-align: center;
+}
+
+.hero-content {
+  align-items: center;
+}
+
+.hero-badge-available {
+  font-size: 0.8rem;
+  padding: 6px 14px;
+  margin-bottom: 16px;
+}
+
+.hero-title {
+  font-size: 2.1rem;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.hero-specialty-wrapper {
+  font-size: 1.15rem;
+  margin-bottom: 14px;
+}
+
+.hero-bio {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.hero-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.hero-actions .btn {
+  width: 100%;
+  min-height: 48px;
+}
+
+.hero-reassurance {
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding-top: 18px;
+}
+
+.doctor-image-wrapper {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.doctor-main-img {
+  height: 380px;
+  border-radius: 20px;
+}
+
+.hero-float-badge {
+  padding: 10px 14px;
+  gap: 10px;
+}
+
+.badge-top-left {
+  top: 10px;
+  left: -8px;
+}
+
+.badge-bottom-right {
+  bottom: 10px;
+  right: -8px;
+}
+
+.badge-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+}
+
+.badge-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.badge-value {
+  font-size: 0.95rem;
+}
+
+.badge-label {
+  font-size: 0.7rem;
+}
+
+.hero-ecg-card {
+  bottom: -15px;
+  left: 19%;
+  transform: translateX(-50%);
+  width: max-content;
+  padding: 8px 14px;
+}
+
+/* Mobile About */
+.about-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.about-image-card img {
+  height: 360px;
+}
+
+.about-experience-badge {
+  padding: 12px 18px;
+  bottom: 16px;
+  right: 16px;
+  gap: 12px;
+}
+
+.exp-number {
+  font-size: 1.7rem;
+}
+
+.exp-text {
+  font-size: 0.76rem;
+}
+
+.about-lead {
+  font-size: 1.05rem;
+}
+
+.about-description {
+  font-size: 0.94rem;
+}
+
+.about-highlights-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-signature-wrapper {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* Mobile Grids */
+.stats-grid,
+.services-grid,
+.awards-grid,
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.stat-card {
+  padding: 24px 18px;
+}
+
+.stat-number {
+  font-size: 2.3rem;
+}
+
+.why-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.why-feature-card {
+  padding: 18px;
+  gap: 14px;
+}
+
+.why-image-card img {
+  height: 340px;
+}
+
+.trust-overlay-card {
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  max-width: none;
+  padding: 14px 18px;
+}
+
+/* Mobile Timeline */
+.timeline-container::before {
+  left: 18px;
+}
+
+.timeline-item {
+  width: 100%;
+  margin-bottom: 28px;
+  padding-left: 48px;
+  padding-right: 0;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+.timeline-item.left,
+.timeline-item.right {
+  left: 0;
+  padding-left: 48px;
+  padding-right: 0;
+}
+
+.timeline-item.left .timeline-dot,
+.timeline-item.right .timeline-dot {
+  left: 7px;
+  right: auto;
+  top: 18px;
+}
+
+.timeline-card {
+  padding: 18px;
+}
+
+/* Mobile Contact & Forms */
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.booking-form-panel {
+  padding: 22px 18px;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  font-size: 16px; /* Prevents auto-zoom on iOS Safari */
+  min-height: 46px;
+}
+
+/* Mobile Footer */
+.footer-section {
+  padding: 50px 0 24px 0;
+}
+
+.footer-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.footer-bottom {
+  flex-direction: column;
+  text-align: center;
+  gap: 12px;
+}
+
+/* Mobile Modal */
+.appointment-modal-card {
+  padding: 22px 18px;
+  width: 95%;
+}
+
+.floating-actions-container {
+  bottom: 18px;
+  right: 18px;
+  gap: 10px;
+}
+
+.floating-whatsapp-btn {
+  width: 50px;
+  height: 50px;
+}
+
+.scroll-top-btn {
+  width: 44px;
+  height: 44px;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. TABLET BREAKPOINT (min-width: 768px) - 2-Column Grid Scaling
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  :root {
+    --container-padding: 28px;
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-section {
+    padding: 60px 0 80px 0;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .hero-specialty-wrapper {
+    font-size: 1.3rem;
+  }
+
+  .hero-actions {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .hero-actions .btn {
+    width: auto;
+  }
+
+  .hero-reassurance {
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .doctor-image-wrapper {
+    max-width: 380px;
+  }
+
+  .doctor-main-img {
+    height: 460px;
+  }
+
+  .about-highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .about-signature-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .awards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   3. DESKTOP BREAKPOINT (min-width: 1024px) - Full Desktop Layout & Navigation
+   -------------------------------------------------------------------------- */
+@media (min-width: 1024px) {
+  :root {
+    --container-padding: 32px;
+    --header-height: calc(var(--nav-height) + var(--topbar-height));
+  }
+
+  .section {
+    padding: 100px 0;
+  }
+
+  /* Desktop Header & Topbar */
+  .topbar {
+    display: block;
+  }
+
+  main {
+    padding-top: var(--header-height);
+  }
+
+  .nav-menu {
+    display: flex;
+  }
+
+  .nav-phone {
+    display: flex;
+  }
+
+  .nav-book-btn {
+    display: inline-flex;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  /* Desktop Hero */
+  .hero-section {
+    min-height: calc(100vh - var(--nav-height) - var(--topbar-height));
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 50px;
+    text-align: left;
+  }
+
+  .hero-content {
+    align-items: flex-start;
+  }
+
+  .hero-title {
+    font-size: 3.4rem;
+  }
+
+  .hero-actions {
+    justify-content: flex-start;
+  }
+
+  .hero-reassurance {
+    justify-content: flex-start;
+  }
+
+  .doctor-image-wrapper {
+    max-width: 440px;
+  }
+
+  .doctor-main-img {
+    height: 520px;
+  }
+
+  .badge-top-left {
+    top: 40px;
+    left: 4px;
+  }
+
+  .badge-bottom-right {
+    bottom: 30px;
+    right: 10px;
+  }
+
+  .hero-ecg-card {
+    bottom: -25px;
+    left: 20px;
+    transform: none;
+  }
+
+  /* Desktop About */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 60px;
+  }
+
+  .about-image-card img {
+    height: 540px;
+  }
+
+  /* Desktop Services & Stats Grids */
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  .why-image-card img {
+    height: 500px;
+  }
+
+  .awards-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 26px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  /* Desktop Alternating Timeline */
+  .timeline-container::before {
+    left: 50%;
+  }
+
+  .timeline-item {
+    width: 50%;
+    margin-bottom: 50px;
+  }
+
+  .timeline-item.left {
+    left: 0;
+    padding-right: 45px;
+    padding-left: 0;
+    justify-content: flex-end;
+  }
+
+  .timeline-item.right {
+    left: 50%;
+    padding-left: 45px;
+    justify-content: flex-start;
+  }
+
+  .timeline-item.left .timeline-dot {
+    right: -11px;
+    left: auto;
+  }
+
+  .timeline-item.right .timeline-dot {
+    left: -11px;
+    right: auto;
+  }
+
+  /* Desktop Contact Grid */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 50px;
+  }
+
+  .booking-form-panel {
+    padding: 40px;
+  }
+
+  /* Desktop Footer */
+  .footer-grid {
+    grid-template-columns: 1.4fr 0.8fr 1fr 1.2fr;
+    gap: 40px;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   4. LARGE SCREEN / ULTRAWIDE (min-width: 1440px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1360px;
+  }
+
+  .hero-title {
+    font-size: 3.8rem;
+  }
+
+  .doctor-main-img {
+    height: 560px;
+  }
+
+  .section-title {
+    font-size: 2.75rem;
+  }
+
+  .stat-number {
+    font-size: 3.3rem;
+  }
+}

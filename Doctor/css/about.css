@@ -1,0 +1,180 @@
+/* ==========================================================================
+   About Doctor Section Styles
+   Modern Doctor Portfolio
+   ========================================================================== */
+
+.about-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* About Visual Column */
+.about-visual {
+  position: relative;
+}
+
+.about-image-card {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 6px solid #FFFFFF;
+}
+
+.about-image-card img {
+  width: 100%;
+  height: 540px;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.about-image-card:hover img {
+  transform: scale(1.03);
+}
+
+.about-experience-badge {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  background: var(--grad-dark);
+  color: #FFFFFF;
+  padding: 18px 24px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: var(--shadow-xl);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.exp-number {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--accent-cyan);
+  line-height: 1;
+}
+
+.exp-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #E2E8F0;
+}
+
+/* About Content Column */
+.about-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-lead {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 28px;
+}
+
+/* Mission Quote Card */
+.mission-quote-card {
+  background: rgba(14, 165, 233, 0.06);
+  border-left: 4px solid var(--accent-cyan);
+  padding: 20px 24px;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.mission-quote-card p {
+  font-style: italic;
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+/* Key Highlights Checkmarks Grid */
+.about-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.highlight-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--accent-emerald);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.highlight-icon svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--accent-emerald);
+}
+
+.highlight-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* Doctor Signature & Designation Footer */
+.about-signature-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-light);
+}
+
+.doctor-signature-text {
+  font-family: 'Plus Jakarta Sans', cursive, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  letter-spacing: -0.03em;
+}
+
+.doctor-designation-badge {
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-designation-badge span:first-child {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 0.95rem;
+}
+
+.doctor-designation-badge span:last-child {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}

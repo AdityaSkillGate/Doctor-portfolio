@@ -1,0 +1,88 @@
+/* ==========================================================================
+   FAQ Accordion Section Styles
+   Modern Doctor Portfolio
+   ========================================================================== */
+
+.faq-section {
+  position: relative;
+  background-color: var(--bg-main);
+}
+
+.faq-container {
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.faq-item.is-open {
+  border-color: rgba(14, 165, 233, 0.4);
+  box-shadow: var(--shadow-md);
+}
+
+.faq-question-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 26px;
+  text-align: left;
+  background: transparent;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--primary);
+  transition: color var(--transition-fast);
+}
+
+.faq-item.is-open .faq-question-btn {
+  color: var(--accent-cyan);
+}
+
+.faq-icon-indicator {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  transition: transform var(--transition-bounce), background var(--transition-fast), color var(--transition-fast);
+}
+
+.faq-item.is-open .faq-icon-indicator {
+  transform: rotate(180deg);
+  background: var(--accent-cyan);
+  color: #FFFFFF;
+}
+
+.faq-icon-indicator svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+}
+
+.faq-answer-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-answer-content {
+  padding: 0 26px 24px 26px;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  border-top: 1px dashed var(--border-light);
+  padding-top: 16px;
+}
